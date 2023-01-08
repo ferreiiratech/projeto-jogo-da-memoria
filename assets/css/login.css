@@ -1,3 +1,9 @@
+body{
+    background: linear-gradient(rgba(0, 0, 0, .82), rgba(0, 0, 0, .82)), url("../img/xmen-backgraund-index.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
 .login-form{
     align-items: center;
     display: flex;
@@ -19,7 +25,7 @@
 }
 
 .login-header h1{
-    color: #545c62;
+    color: #acb1b4;
     font-size: 1.5em;
 }
 
@@ -43,15 +49,21 @@
     padding: 15px;
     border-radius: 8px;
     cursor: pointer;
-    background-color: #545c62;
-}
-
-.login-button:hover p{
-    scale: 1.2;
-    transition: all .3s;
+    background-color: #940b0b;
 }
 
 .login-button:disabled{
     color: #8e8e8e;
     background-color: #b7b7b7;
 }
+
+.login-button:disabled p{
+    scale: 1;
+}
+
+.login-button p{
+    scale: 1.2;
+    transition: all .3s;
+}
+
+

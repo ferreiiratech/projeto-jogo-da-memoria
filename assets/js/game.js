@@ -1,4 +1,6 @@
 const grid = document.querySelector('.grid')
+const spanPlayer = document.querySelector('.player')
+const time = document.querySelector('.time')
 
 const characters = [
     'arcanjo',
@@ -8,7 +10,9 @@ const characters = [
     'jean-gray',
     'noturno',
     'tempestade',
-    'wolverine'
+    'wolverine',
+    'vampira',
+    'lincenegra'
 ]
 
 const createElement = (tag, className) => {
@@ -23,14 +27,12 @@ let secondCard = '';
 const checkEndGame = () => {
     const disabledCards = document.querySelectorAll('.disabled-card');
 
-    if(disabledCards.length == characters.length+6){
+    if(disabledCards.length == characters.length+8){
         setTimeout(() => {
-            alert('Parabens, você conseguiu')
+            clearInterval(this.loop)
+            alert(`Parabéns, ${spanPlayer.innerHTML}. Seu tempo foi: ${time.innerHTML}s`)
         }, 500)
-        
     }
-
-
 }
 
 const checkCards = () => {
@@ -112,4 +114,19 @@ const loadGame = () => {
     });
 }
 
-loadGame();
+const startTimer = () => {
+    this.loop = setInterval(() => {
+        const currentTime = +time.innerHTML
+        time.innerHTML = currentTime + 1
+    }, 1000);
+}
+
+window.onload = () => {
+    const playerName = localStorage.getItem('player')
+
+    spanPlayer.innerHTML = playerName
+
+    startTimer();
+
+    loadGame();
+}

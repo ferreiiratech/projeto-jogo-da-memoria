@@ -1,10 +1,39 @@
+body{
+    background: url("../img/fundo-body.webp");
+    background-size: cover;
+    background-position: center;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 100vh;
+}
+
+header{
+    color: white;
+    font-size: 1.3em;
+    width: 100%;
+    max-width: 900px;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: rgba(51, 51, 51, .7);
+}
+
 .grid{
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     gap: 15px;
     width: 100%;
-    max-width: 800px;
-    margin: 100px auto;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 25px 50px;
+    background-color: rgba(51, 51, 51, .7);
 }
 
 .card{
@@ -23,6 +52,7 @@
     position: absolute;
     border: 2px solid black;
     border-radius: 5px;
+    cursor: pointer;
 }
 
 .front{
@@ -33,7 +63,7 @@
 }
 
 .back{
-    background: url(../img/xmen-backgraund.jpg);
+    background: url(../img/xmen-backgraund-card.jpg);
     background-size: cover;
     background-position: center;
     backface-visibility: hidden;
