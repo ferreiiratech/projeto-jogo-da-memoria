@@ -34,6 +34,18 @@ const checkEndGame = () => {
             clearInterval(this.loop);
             
             alert(`Parabéns, ${spanPlayer.innerHTML}. Seu tempo foi: ${time.innerHTML}s`);
+
+            const continueOrRepeat = prompt('Deseja ir para o próximo nível?\n[1]Sim, ir para o próximo nível\n[2]Não, repetir jogo atual')
+
+            if(continueOrRepeat == '1'){
+                
+                window.location = 'gamelevel2.html'
+
+            } else {
+
+                window.location = 'gamelevel1.html'
+                
+            }
             
         }, 500)
     }
@@ -98,7 +110,7 @@ const createCard = (character) => {
     card.appendChild(front);
     card.appendChild(back);
 
-    front.style.backgroundImage = `url(../img/personagens/${character}.jpg)`;
+    front.style.backgroundImage = `url(../img/personagens/gamelevel1/${character}.jpg)`;
 
     card.addEventListener('click', reviewcard);
 
