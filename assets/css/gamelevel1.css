@@ -25,6 +25,11 @@ header{
     background-color: rgba(51, 51, 51, .7);
 }
 
+.btnAudio{
+    color: white;
+    cursor: pointer;
+}
+
 .grid{
     display: grid;
     grid-template-columns: repeat(5, 1fr);

@@ -1,6 +1,9 @@
 const grid = document.querySelector('.grid');
 const spanPlayer = document.querySelector('.player');
 const time = document.querySelector('.time');
+const music = document.querySelector('audio')
+const play = document.querySelector('.bi-volume-up-fill')
+const pause = document.querySelector('.bi-volume-mute-fill')
 
 const characters = [
     'arcanjo',
@@ -140,6 +143,25 @@ const startTimer = () => {
     }, 1000);
 }
 
+play.style.display = 'none'
+
+const playMusic = () => {
+    
+    pause.addEventListener('click', () => {
+        music.play()
+        pause.style.display = 'none'
+        play.style.display = 'block'
+    })
+}
+
+const pauseMusic = () => {
+    play.addEventListener('click', () => {
+        music.pause()
+        play.style.display = 'none'
+        pause.style.display = 'block'
+    })
+}
+
 window.onload = () => {
     const playerName = localStorage.getItem('player');
 
@@ -148,4 +170,8 @@ window.onload = () => {
     startTimer();
 
     loadGame();
+
+    playMusic();
+
+    pauseMusic();
 }
