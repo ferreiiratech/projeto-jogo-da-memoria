@@ -112,7 +112,11 @@ const createCard = (character) => {
     card.appendChild(front);
     card.appendChild(back);
 
-    front.style.backgroundImage = `url(../img/personagens/gamelevel1/${character}.jpg)`;
+    setTimeout(() => {
+
+        front.style.backgroundImage = `url(../img/personagens/gamelevel1/${character}.jpg)`;
+
+    }, 1000)
 
     card.addEventListener('click', reviewcard);
 
