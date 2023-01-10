@@ -1,16 +1,21 @@
 body{
-    background: url("../img/fundo-body-level1.webp");
+    background: url("../img/background/xmen-backgraund-level2.jpg");
     background-size: cover;
     background-position: center;
 }
 
+header{
+    max-width: 1000px;
+}
+
 .grid{
-    display: grid;
     grid-template-columns: repeat(6, 1fr);
-    gap: 15px;
-    width: 100%;
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 25px 50px;
-    background-color: rgba(51, 51, 51, .7);
+    max-width: 1000px;
+}
+
+.back{
+    background: url('../img/fundo-card/xmen-fundo-card-level2.jpg');
+    background-size: cover;
+    background-position: center;
+    backface-visibility: hidden;
 }

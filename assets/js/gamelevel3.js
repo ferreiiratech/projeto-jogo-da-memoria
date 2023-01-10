@@ -14,7 +14,11 @@ const characters = [
     'vampira',
     'lincenegra',
     'mistica',
-    'xavier'
+    'xavier', 
+    'magneto',
+    'manchasolar',
+    'emma',
+    'deadpool'
 ]
 
 const createElement = (tag, className) => {
@@ -30,26 +34,15 @@ let secondCard = '';
 const checkEndGame = () => {
     const disabledCards = document.querySelectorAll('.disabled-card');
 
-    if(disabledCards.length-10 == characters.length){
+    if(disabledCards.length-14 == characters.length){
         setTimeout(() => {
             
             clearInterval(this.loop);
             
             alert(`Parabéns, ${spanPlayer.innerHTML}. Seu tempo foi: ${time.innerHTML}s`);
 
-            const continueOrRepeat = prompt('Deseja ir para o próximo nível?\n[1]Sim, ir para o próximo nível\n[2]Não, repetir jogo atual')
+            window.location = 'gameover.html'
 
-            if(continueOrRepeat == '1'){
-                
-                window.location = 'gamelevel3.html'
-
-            } else if(continueOrRepeat == '2'){
-
-                window.location = 'gamelevel2.html'
-            } else{
-                alert('Entrada inválida, avançando o jogo')
-                window.location = 'gamelevel3.html'
-            }
             
         }, 500)
     }
@@ -114,7 +107,7 @@ const createCard = (character) => {
     card.appendChild(front);
     card.appendChild(back);
 
-    front.style.backgroundImage = `url(../img/personagens/gamelevel2/${character}.jpg)`;
+    front.style.backgroundImage = `url(../img/personagens/gamelevel3/${character}.jpg)`;
 
     card.addEventListener('click', reviewcard);
 

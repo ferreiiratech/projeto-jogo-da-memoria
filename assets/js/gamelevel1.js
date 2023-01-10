@@ -41,10 +41,12 @@ const checkEndGame = () => {
                 
                 window.location = 'gamelevel2.html'
 
-            } else {
+            } else if(continueOrRepeat == '2'){
 
                 window.location = 'gamelevel1.html'
-                
+            } else{
+                alert('Entrada inválida, avançando o jogo')
+                window.location = 'gamelevel2.html'
             }
             
         }, 500)

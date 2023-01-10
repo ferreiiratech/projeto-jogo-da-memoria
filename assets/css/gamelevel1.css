@@ -1,5 +1,5 @@
 body{
-    background: url("../img/fundo-body-level1.webp");
+    background: url("../img/background/xmen-backgraund-level1.webp");
     background-size: cover;
     background-position: center;
 }
@@ -63,7 +63,7 @@ header{
 }
 
 .back{
-    background: url(../img/xmen-backgraund-card.jpg);
+    background: url('../img/fundo-card/xmen-fundo-card-level1.jpg');
     background-size: cover;
     background-position: center;
     backface-visibility: hidden;
