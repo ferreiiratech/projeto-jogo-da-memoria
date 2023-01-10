@@ -111,7 +111,7 @@ const createCard = (character) => {
 
         front.style.backgroundImage = `url(../img/personagens/gamelevel3/${character}.jpg)`;
 
-    }, 1000)
+    }, 1500)
 
     card.addEventListener('click', reviewcard);
 
