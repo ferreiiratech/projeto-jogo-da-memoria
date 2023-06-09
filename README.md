@@ -22,6 +22,16 @@ Open the project in VS Code using the following command:
 code .
 ````
 
-## 3. Media
+## 3. Technologies used in the project.
+<ul>
+  <li>Javascript</li>
+  <li>HTML</li>
+  <li>CSS</li>
+</ul>
+
+## 4. Media
 <img src='assets/img/imagem1.png'>
 <img src='assets/img/imagem2.png'>
+
+## 5. Project author 
+<a href="https://www.linkedin.com/in/leonardoferreiralima/">Leonardo Ferreira</a>
